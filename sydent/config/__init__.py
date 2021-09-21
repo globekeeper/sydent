@@ -245,11 +245,6 @@ class SydentConfig:
 
         needs_saving = self.parse_from_config_parser(cfg)
 
-        if needs_saving:
-            fp = open(config_file, "w")
-            cfg.write(fp)
-            fp.close()
-
     def parse_config_dict(self, config_dict: Dict) -> None:
         """
         Parse the given config from a dictionary, populating missing items and sections
